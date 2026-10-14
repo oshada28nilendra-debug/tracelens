@@ -1,0 +1,154 @@
+{
+  "resourceSpans": [
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "service.name",
+            "value": {
+              "stringValue": "gateway"
+            }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "synthetic-fixture"
+          },
+          "spans": [
+            {
+              "traceId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "spanId": "0000000000000001",
+              "parentSpanId": "",
+              "name": "POST /checkout",
+              "startTimeUnixNano": "1791936000000000000",
+              "endTimeUnixNano": "1791936000500000000",
+              "status": {
+                "code": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "service.name",
+            "value": {
+              "stringValue": "orders"
+            }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "synthetic-fixture"
+          },
+          "spans": [
+            {
+              "traceId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "spanId": "0000000000000002",
+              "parentSpanId": "0000000000000001",
+              "name": "checkout",
+              "startTimeUnixNano": "1791936000020000000",
+              "endTimeUnixNano": "1791936000480000000",
+              "status": {
+                "code": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "service.name",
+            "value": {
+              "stringValue": "database"
+            }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "synthetic-fixture"
+          },
+          "spans": [
+            {
+              "traceId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "spanId": "0000000000000003",
+              "parentSpanId": "0000000000000002",
+              "name": "SELECT inventory",
+              "startTimeUnixNano": "1791936000040000000",
+              "endTimeUnixNano": "1791936000180000000",
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "spanId": "0000000000000004",
+              "parentSpanId": "0000000000000002",
+              "name": "SELECT inventory",
+              "startTimeUnixNano": "1791936000100000000",
+              "endTimeUnixNano": "1791936000220000000",
+              "status": {
+                "code": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "service.name",
+            "value": {
+              "stringValue": "payments"
+            }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "synthetic-fixture"
+          },
+          "spans": [
+            {
+              "traceId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "spanId": "0000000000000005",
+              "parentSpanId": "0000000000000002",
+              "name": "charge",
+              "startTimeUnixNano": "1791936000240000000",
+              "endTimeUnixNano": "1791936000450000000",
+              "status": {
+                "code": 2
+              }
+            },
+            {
+              "traceId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "spanId": "0000000000000006",
+              "parentSpanId": "0000000000000063",
+              "name": "orphan callback",
+              "startTimeUnixNano": "1791936000510000000",
+              "endTimeUnixNano": "1791936000540000000",
+              "status": {
+                "code": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
